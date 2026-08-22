@@ -1,0 +1,29 @@
+a {
+    color: blue;
+    text-decoration: none;
+}
+a:hover, a:active { font-weight: bold; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.grid-container > div {line-height:1.5em;}
+
+ul{list-style-type:none;margin:0;padding:0}
+li{padding:0.5em 0em 0em 0em}
+
+/* Desktop styles: Activate on screens 40rem (640px) or wider */
+@media all and (min-width: 40rem) {
+    /* Turn the container into a flexbox that wraps */
+    .group, [class*=colgroup] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4%; /* Automatically creates the space between items */
+    }
+
+/* Make columns take up roughly half the width, accounting for the gap */
+    [class*=colgroup] .col {
+	flex: 0 0 48%; 
+    }
+}
